@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuardRequirment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/requirment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="For how much duration you need guards?"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_16sdp" />
+
+                <EditText
+                    android:id="@+id/timestart"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/requirment"
+                    android:layout_marginLeft="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_20sdp" />
+
+                <Button
+                    android:id="@+id/takestarttime"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timestart"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/colorPrimary"
+                    android:text="Start Time"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/timeend"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/requirment"
+                    android:layout_marginLeft="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_toRightOf="@id/timestart" />
+
+                <Button
+                    android:id="@+id/takeendtime"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeend"
+                    android:layout_marginLeft="@dimen/_70sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_toRightOf="@id/takestarttime"
+                    android:background="@color/colorPrimary"
+                    android:text="End Time"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/noofdays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeend"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_80sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="Required No of Days ::"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_15sdp" />
+
+                <EditText
+                    android:id="@+id/daysentry"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noofdays"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="* Enter no of days"
+                    android:textColorHint="#A51B11"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/text0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/daysentry"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="No. of Guards ::"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_15sdp" />
+
+                <EditText
+                    android:id="@+id/requiredguard"
+                    android:layout_width="@dimen/_165sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text0"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="* Enter no of Guards Required"
+                    android:textColorHint="#A51B11"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/requiredguard"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="Company Name ::"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_15sdp" />
+
+                <EditText
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text3"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="* Enter your company name"
+                    android:textColorHint="#A51B11"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/company_name"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="Contact Number"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_15sdp" />
+
+                <EditText
+                    android:id="@+id/companycontact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text4"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="*Company Contact Number Required"
+                    android:textColorHint="#A51B11"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/companycontact"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="Current Address ::"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_15sdp" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text5"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="Company Address Required"
+                    android:textColorHint="#A51B11"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/say"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="Do you want to say something?"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_15sdp" />
+
+                <EditText
+                    android:id="@+id/comments"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/say"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Button
+                    android:id="@+id/sendrequest"
+                    android:layout_width="@dimen/_125sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/comments"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:background="#9C27B0"
+                    android:text="Submitt Request"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/comments"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_toRightOf="@id/sendrequest"
+                    android:background="#9C27B0"
+                    android:text="Cancel"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

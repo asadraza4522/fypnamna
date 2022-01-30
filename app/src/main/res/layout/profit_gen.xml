@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Select Package Category"
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+                <RadioGroup
+                    android:id="@+id/group"
+                    android:layout_width="192dp"
+                    android:layout_height="168dp"
+                    android:layout_below="@id/select"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="18dp">
+
+                    <RadioButton
+                        android:id="@+id/daily"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Daily"
+                        android:textColor="#154"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/weekly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Weekly"
+                        android:textColor="#154"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/monthly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Monthly"
+                        android:textColor="#154"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/group"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Enter Package Charges"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/package_charges"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/group"
+                    android:layout_marginLeft="82dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/textview1" />
+
+                <TextView
+                    android:id="@+id/textview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Enter No. of Guards"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/no_of_guards"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/package_charges"
+                    android:layout_marginLeft="113dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/textview2" />
+
+                <TextView
+                    android:id="@+id/textview3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Per Guard Monthly Salary"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/guard_salary"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/no_of_guards"
+                    android:layout_marginLeft="67dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/textview3" />
+
+                <TextView
+                    android:id="@+id/textview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="No of Weapon Assigned to Guard"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-black" />
+
+                <EditText
+                    android:id="@+id/weapon_assigned"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/guard_salary"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/textview4" />
+
+                <TextView
+                    android:id="@+id/textview5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Per Weapon Cost"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-black" />
+
+                <EditText
+                    android:id="@+id/weapon_cost"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/weapon_assigned"
+                    android:layout_marginLeft="132dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toRightOf="@id/textview5" />
+
+                <TextView
+                    android:id="@+id/textview6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Monthly Fuel Cost"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-black" />
+
+                <EditText
+                    android:id="@+id/fuel_cost"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/weapon_cost"
+                    android:layout_marginLeft="127dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/textview6" />
+
+                <TextView
+                    android:id="@+id/textview7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview6"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Monthly Food Cost"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-black" />
+
+                <EditText
+                    android:id="@+id/food_cost"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fuel_cost"
+                    android:layout_marginLeft="121dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@id/textview7" />
+
+                <TextView
+                    android:id="@+id/textview8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview7"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Per Hour Overnight Charges"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-black" />
+
+                <EditText
+                    android:id="@+id/overnight_charges"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/food_cost"
+                    android:layout_marginLeft="44dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/textview8" />
+
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/overnight_charges"
+                    android:layout_marginLeft="155dp"
+                    android:layout_marginTop="23dp"
+                    android:background="#172B67"
+                    android:text="Submit"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/textview9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/submitButton"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:text="Monthly Profit"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-black" />
+
+                <EditText
+                    android:id="@+id/monthly_profit"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/submitButton"
+                    android:layout_marginLeft="156dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/textview9" />
+
+                <TextView
+                    android:id="@+id/textview10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview9"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Yearly Profit"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-black" />
+
+                <EditText
+                    android:id="@+id/yearly_profit"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/monthly_profit"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_toRightOf="@id/textview10" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

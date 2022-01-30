@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity">
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:ems="8"
+        android:hint="* Enter Customer Name"
+        android:textColorHint="@color/red"
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/edittext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext1"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:ems="8"
+        android:hint="*Enter Contact No."
+        android:textColorHint="@color/red"
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/edittext3"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext2"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:ems="8"
+        android:hint="*Enter Location Details"
+        android:textColorHint="@color/red"
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/edittext4"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext3"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:ems="8"
+        android:hint="* Enter Other Details"
+        android:textColorHint="@color/red"
+        android:textSize="@dimen/_12sdp" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext4"
+        android:layout_marginLeft="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@color/colorPrimary"
+        android:text="Save Details"
+        android:textColor="#ffff" />
+
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit_button"
+        android:layout_marginTop="@dimen/_30sdp" />
+
+</RelativeLayout>

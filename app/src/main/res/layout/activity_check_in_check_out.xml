@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckInCheckOutActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:fontFamily="sans-serif"
+            android:text="@string/working_hours_count_down"
+            android:textSize="@dimen/_20sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Chronometer
+                android:countDown="true"
+                android:id="@+id/chronometerWorking"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:textSize="@dimen/_45sdp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/checkin"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_200sdp"
+            android:background="@drawable/button_bg"
+            android:text="Check In"
+            android:textColor="#fff"
+            android:textSize="@dimen/_15sdp" />
+
+        <Button
+            android:id="@+id/checkout"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_200sdp"
+            android:layout_toRightOf="@id/checkin"
+            android:background="@drawable/button_bg2"
+            android:text="Check Out"
+            android:textColor="#000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Chronometer
+                android:countDown="true"
+                android:id="@+id/chronometerBreak"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_280sdp"
+                android:textSize="@dimen/_30sdp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/startbreak"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkin"
+            android:layout_marginLeft="@dimen/_75sdp"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:background="@drawable/button_bg3"
+            android:text="Start Break Time"
+            android:textColor="#fff"
+            android:textSize="@dimen/_15sdp" />
+
+        <Button
+            android:id="@+id/stopbreak"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startbreak"
+            android:layout_marginLeft="@dimen/_75sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/button_bg4"
+            android:text="Stop Break"
+            android:textColor="#000"
+            android:textSize="@dimen/_15sdp" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

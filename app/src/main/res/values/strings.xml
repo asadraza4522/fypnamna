@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">FypApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question1">1. How many time police can enter into private property? </string>
+
+    <string name="question1_choice1">Four</string>
+
+    <string name="question1_choice2">Five</string>
+
+    <string name="question1_choice3">Two</string>
+
+    <string name="question2">2. A security guard should not carry any weapon unless authorized by? </string>
+
+    <string name="question3">3. The aim of crime since preservation is to? </string>
+
+    <string name="question3_choice1">Help the people</string>
+
+    <string name="question3_choice2">Avoid guard</string>
+
+    <string name="question3_choice3">Avoid contamination of evidence</string>
+
+    <string name="question3_choice4">All of the above</string>
+
+    <string name="question4">4. Information security includes?</string>
+
+    <string name="question5">5. A number of monitor place together</string>
+
+    <string name="question5_choice1">Cctv</string>
+
+    <string name="question5_choice2">Video splitter</string>
+
+    <string name="question5_choice3">Video board</string>
+
+    <string name="question6">6. Of how many years criminal maturity a guard should have?</string>
+
+    <string name="question7">7.The notebook is used for?</string>
+
+    <string name="question7_choice1">International use</string>
+
+    <string name="question7_choice2">Keeping in pocket</string>
+
+    <string name="question7_choice3">Using property on 12 hours duty</string>
+
+    <string name="question7_choice4">None of the above</string>
+
+    <string name="question8">8.The most dangerous type of crime is?</string>
+
+    <string name="question9">9. Customer service is always balanced against?</string>
+
+    <string name="question9_choice1">Customer</string>
+
+    <string name="question9_choice2">Security services</string>
+
+    <string name="question10">10. What is the greatest weapon of the security guard?</string>
+
+    <string name="submit_answers">Submit Answers</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="find_user_s_location">Find User\'s Location</string>
+    <string name="working_hours_count_down">Working Hours Count Down</string>
+
+</resources>

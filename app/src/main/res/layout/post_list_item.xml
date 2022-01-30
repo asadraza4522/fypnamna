@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_6sdp"
+    android:background="#fff"
+    app:cardCornerRadius="@dimen/_4sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/tool1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/package_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="#000" />
+
+        <TextView
+            android:id="@+id/package1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/package_image"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Package Name"
+            android:textColor="#0077D2"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/package1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="Company Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/package_charge_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="Package Price"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_toRightOf="@id/package_charge_category"
+            android:fontFamily="@font/robotoregular"
+            android:text="Rs."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/charges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_toRightOf="@id/price1"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Price"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/spacer1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/charges"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@id/package1"
+            android:layout_marginLeft="175dp"
+            android:layout_marginTop="47dp"
+            android:layout_toRightOf="@id/company"
+            android:background="@drawable/ic_baseline_chat_24" />
+
+        <RelativeLayout
+            android:id="@+id/tool2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spacer1"
+            android:layout_marginTop="@dimen/_12sdp">
+
+            <TextView
+                android:id="@+id/heading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Package Detail"
+                android:textColor="#0077D2"
+                android:textSize="@dimen/_19sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/allotedsecurity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heading1"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_7sdp"
+                android:text="Alloted Security"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp" />
+
+            <TextView
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heading1"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_toRightOf="@id/allotedsecurity"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_7sdp"
+                android:text="Guard Category"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/spacer2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_below="@id/allotedsecurity"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/alloted_weapons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spacer2"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_7sdp"
+                android:text="Alloted Weapons"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp" />
+
+            <TextView
+                android:id="@+id/radio_wType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radio1"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_toRightOf="@id/alloted_weapons"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_7sdp"
+                android:text="Weapon Types"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/spacer3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_below="@id/alloted_weapons"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/package_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spacer3"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_7sdp"
+                android:text="Package Hours"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp" />
+
+            <TextView
+                android:id="@+id/hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radio_wType"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_toRightOf="@id/package_hours"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_7sdp"
+                android:text="No of Hours"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/spacer4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_below="@id/package_hours"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/alloted_guards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spacer4"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_7sdp"
+                android:text="Alloted No of Guards"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp" />
+
+            <TextView
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hours"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_toRightOf="@id/alloted_guards"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_7sdp"
+                android:text="No of Guards"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/spacer5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_below="@id/radio2"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/tool3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spacer5"
+                android:layout_marginTop="@dimen/_13sdp">
+
+                <TextView
+                    android:id="@+id/heading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Package Duration"
+                    android:textColor="#0077D2"
+                    android:textSize="@dimen/_19sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/duty_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heading2"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="Duty Start Time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/duty_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heading2"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginLeft="64dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_toRightOf="@id/duty_start_time"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="Duty End Time"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/starttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/duty_start_time"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_8sdp"
+                    android:text="0:00 AM"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/endtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/duty_start_time"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_toRightOf="@id/starttime"
+                    android:padding="@dimen/_8sdp"
+                    android:text="0:00 PM"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <View
+                    android:id="@+id/spacer6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@id/starttime"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer6"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="Package Days"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/radio_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer6"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_toRightOf="@id/days"
+                    android:padding="@dimen/_7sdp"
+                    android:text="Mon_Sat"
+                    android:textSize="@dimen/_17sdp" />
+
+                <View
+                    android:id="@+id/spacer7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@id/radio_days"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/dur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer7"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:text="Package Duration"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/radio_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer7"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_toRightOf="@id/dur"
+                    android:padding="@dimen/_7sdp"
+                    android:text="1 year"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <View
+                    android:id="@+id/spacer8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@id/dur"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/heading3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer8"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Rates"
+                    android:textColor="#F44336"
+                    android:textSize="@dimen/_19sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/extra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heading3"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="Extra Hour Charges"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/rs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heading3"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_toRightOf="@id/extra"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="RS."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/extrahour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heading3"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_toRightOf="@id/rs1"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="480"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <View
+                    android:id="@+id/spacer9"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@id/extra"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer9"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="OverNight Charges"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/rs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer9"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_toRightOf="@id/over"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="RS."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/overnight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer9"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_toRightOf="@id/rs2"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="480"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <View
+                    android:id="@+id/spacer10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@id/over"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer10"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="Out of City Charges"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/rs3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer10"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_toRightOf="@id/city"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="RS."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/out_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer10"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_toRightOf="@id/rs3"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_7sdp"
+                    android:text="480"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <View
+                    android:id="@+id/spacer11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/heading4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spacer11"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="Description"
+                    android:textColor="#0077D2"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heading4"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="Package Description"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <Button
+                    android:id="@+id/get_package"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/city"
+                    android:layout_marginLeft="@dimen/_60sdp"
+                    android:background="#0B59A2"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+                    android:text="Get Package"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <!--            <Button-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="Get Package"-->
+                <!--                android:fontFamily="sans-serif"-->
+                <!--                android:textSize="@dimen/_15sdp"-->
+                <!--                android:textStyle="bold"-->
+                <!--                android:layout_below="@id/radio_duration"-->
+                <!--                android:textColor="@color/black"-->
+                <!--                android:background="#2196F3"-->
+                <!--                android:id="@+id/get_package"/>-->
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
