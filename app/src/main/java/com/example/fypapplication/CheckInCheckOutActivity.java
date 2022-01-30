@@ -5,13 +5,14 @@ import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CheckInCheckOutActivity extends AppCompatActivity {
     Button checkin, checkout, breakstart, breakstop;
     Chronometer workingHoursCount , breakCount;
-    int workingCounter = 28800;
+    int workingCounter = 288000;
     int breakCounter = 1800;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class CheckInCheckOutActivity extends AppCompatActivity {
         checkin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                workingHoursCount.setBase(workingCounter);
                 workingHoursCount.start();
             }
         });
@@ -41,9 +43,9 @@ public class CheckInCheckOutActivity extends AppCompatActivity {
 
     }
     private void onChronometerTickHandler()  {
-        if(workingCounter < 0) {
-            workingCounter = 28800;
+        if ((workingHoursCount.getBase()) >= 0) {
+            workingHoursCount.setBase(workingHoursCount.getBase() - SystemClock.elapsedRealtime());
         }
-        workingCounter--;
+        Toast.makeText(this, "Bing! " + workingHoursCount.getBase(), Toast.LENGTH_SHORT).show();
     }
 }
