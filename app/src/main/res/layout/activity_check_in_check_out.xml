@@ -24,11 +24,10 @@
             android:orientation="vertical">
 
             <Chronometer
-
                 android:id="@+id/chronometerWorking"
-                android:layout_width="@dimen/_150sdp"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
-                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_marginTop="@dimen/_80sdp"
                 android:textSize="@dimen/_45sdp" />
 
@@ -65,9 +64,9 @@
             <Chronometer
                 android:countDown="true"
                 android:id="@+id/chronometerBreak"
-                android:layout_width="@dimen/_100sdp"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
-                android:layout_gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_marginTop="@dimen/_280sdp"
                 android:textSize="@dimen/_30sdp" />
         </LinearLayout>

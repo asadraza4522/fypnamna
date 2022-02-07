@@ -1,19 +1,34 @@
 package com.example.fypapplication;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.fypapplication.Post.model.LocationInfo;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference dbReference= database.getReference("test");
+    private Button find_location_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +37,45 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        find_location_btn = (Button) findViewById(R.id.btn_find_location);
         mapFragment.getMapAsync(this);
+        dbReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    //get the exact longitude and latitude from the database "test"
+                    LocationInfo location = snapshot.child("test").getValue(LocationInfo.class);
+                     final Double locationLat = location.getLatitude();
+                     final Double locationLong = location.getLongitude();
+                    //trigger reading of location from database using the button
+                    find_location_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // check if the latitude and longitude is not null
+                            if (locationLat != null && locationLong!= null) {
+                                // create a LatLng object from location
+                                LatLng latLng = new LatLng(locationLat, locationLong);
+                                //create a marker at the read location and display it on the map
+                                mMap.addMarker(new MarkerOptions().position(latLng).title("The gUARD is currently here"));
+                                //specify how the map camera is updated
+                                CameraUpdate update = CameraUpdateFactory.newLatLngZoom(latLng, 16.0f);
+                                //update the camera with the CameraUpdate object
+                                mMap.moveCamera(update);
+                            }
+                            else {
+                                // if location is null , log an error message
+                                Log.e("Maps Activity", "user location cannot be found");
+                            }
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), "Could not read from database", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     /**

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
 
 android {
@@ -35,7 +36,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.4'
     implementation 'androidx.navigation:navigation-ui:2.3.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'org.jetbrains:annotations-java5:15.0'
+//    implementation 'org.jetbrains:annotations-java5:15.0'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.google.firebase:firebase-storage:19.2.2'
@@ -52,7 +53,7 @@ dependencies {
 
 
     implementation('com.theartofdev.edmodo:android-image-cropper:2.4.7')
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
     //noinspection GradleCompatible
@@ -61,7 +62,11 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation "androidx.biometric:biometric:1.1.0" //depency for fingerprint
     implementation 'me.aflak.libraries:fingerprint:2.5.3'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 
-
+}
+repositories {
+    mavenCentral()
 }

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -77,7 +76,7 @@ public class OnboardingActivity extends AppCompatActivity {
     }
 
     public void mainPage(View view) {
-        Intent i = new Intent(OnboardingActivity.this,UsersActivity.class);
+        Intent i = new Intent(OnboardingActivity.this,GuardDashboard.class);
         startActivity(i);
     }
 }
