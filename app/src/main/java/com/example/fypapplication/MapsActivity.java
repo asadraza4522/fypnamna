@@ -38,7 +38,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         find_location_btn = (Button) findViewById(R.id.btn_find_location);
-        mapFragment.getMapAsync(this);
+        if (mapFragment != null)
+            mapFragment.getMapAsync(this);
+
         dbReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

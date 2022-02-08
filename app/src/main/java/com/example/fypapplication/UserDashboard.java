@@ -4,11 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.fypapplication.Post.activity.PostListActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.fypapplication.Post.activity.PostListActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UserDashboard extends AppCompatActivity {
     @Override
@@ -23,6 +23,8 @@ public class UserDashboard extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(), CustomerOptionActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
 //                    case R.id.nav_guard:
 //                        startActivity(new Intent(getApplicationContext(), GuardActivity.class));

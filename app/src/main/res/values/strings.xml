@@ -58,5 +58,6 @@
     <string name="no_data_found">No Data Found</string>
     <string name="find_user_s_location">Find User\'s Location</string>
     <string name="working_hours_count_down">Working Hours Count Down</string>
+    <string name="name_of_the_company">Name of the Company</string>
 
 </resources>

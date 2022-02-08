@@ -76,7 +76,7 @@ public class OnboardingActivity extends AppCompatActivity {
     }
 
     public void mainPage(View view) {
-        Intent i = new Intent(OnboardingActivity.this,GuardDashboard.class);
+        Intent i = new Intent(OnboardingActivity.this,UsersActivity.class);
         startActivity(i);
     }
 }

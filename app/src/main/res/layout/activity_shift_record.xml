@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShiftRecordActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Guard Name"
+            android:textSize="18dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/textview1"/>
+
+        <EditText
+            android:id="@+id/guardName"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="82dp"
+            android:layout_marginTop="80dp"
+            android:layout_toRightOf="@id/textview1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Shift Start Time"
+            android:textSize="18dp"
+            android:layout_below="@id/textview1"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/textview2"/>
+
+        <EditText
+            android:id="@+id/shiftStart"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="82dp"
+            android:layout_below="@id/guardName"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/textview1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Shift End Time"
+            android:textSize="18dp"
+            android:layout_below="@id/textview2"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/textview3"/>
+
+        <EditText
+            android:id="@+id/shiftEnd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="82dp"
+            android:layout_below="@id/shiftStart"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/textview1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Total Breat Time"
+            android:textSize="18dp"
+            android:layout_below="@id/textview3"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/textview4"/>
+
+        <EditText
+            android:id="@+id/breakTiming"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="82dp"
+            android:layout_below="@id/shiftEnd"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/textview1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/breakTiming"
+            android:layout_below="@id/shiftEnd"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Edit"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:id="@+id/editbreaktime"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="No of Shift Hours"
+            android:textSize="18dp"
+            android:layout_below="@id/textview4"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/no_of_shift_hours"/>
+
+        <EditText
+            android:id="@+id/shiftHours"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="82dp"
+            android:layout_below="@id/breakTiming"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/textview1" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
